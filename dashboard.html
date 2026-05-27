@@ -1,35 +1,22 @@
-<!DOCTYPE html>
+
 <html>
-
 <head>
-
 <title>AI AGENCY DASHBOARD</title>
 
 <style>
 
 body{
-
-background:#0f0f0f;
+background:#111;
 color:white;
 font-family:sans-serif;
-padding:20px;
-
+padding:30px;
 }
 
 .card{
-
-background:#1b1b1b;
+background:#222;
 padding:20px;
-margin:10px;
-border-radius:10px;
-border:1px solid red;
-
-}
-
-h1{
-
-color:red;
-
+margin:20px;
+border-radius:15px;
 }
 
 </style>
@@ -38,79 +25,17 @@ color:red;
 
 <body>
 
-<h1>🔥 AI AGENCY DASHBOARD 🔥</h1>
+<h1>🔥 AI AGENCY DASHBOARD</h1>
 
-<div class="card">
-<h2>💰 Income</h2>
-<h3 id="income">Loading...</h3>
+<div class='card'>
+<h2>📊 STATISTICS</h2>
+
+<p>🌐 Website : 0</p>
+<p>📰 SEO : 0</p>
+<p>📢 Promo : 0</p>
+<p>💻 Product : 0</p>
+
 </div>
-
-<div class="card">
-<h2>🌐 Website</h2>
-<h3 id="website">Loading...</h3>
-</div>
-
-<div class="card">
-<h2>📰 Content</h2>
-<h3 id="content">Loading...</h3>
-</div>
-
-<div class="card">
-<h2>📢 Promo</h2>
-<h3 id="promo">Loading...</h3>
-</div>
-
-<div class="card">
-<h2>👨 Lead</h2>
-<h3 id="lead">Loading...</h3>
-</div>
-
-<script>
-
-const url =
-"https://console.firebase.google.com/u/0/project/ai-agency-6d52c/database/ai-agency-6d52c-default-rtdb/data/~2F?utm_source=chatgpt.com/data.json";
-
-async function loadData(){
-
-const r = await fetch(url);
-
-const data = await r.json();
-
-document.getElementById(
-"income"
-).innerHTML =
-"Rp " + data.income;
-
-document.getElementById(
-"website"
-).innerHTML =
-data.website;
-
-document.getElementById(
-"content"
-).innerHTML =
-data.content;
-
-document.getElementById(
-"promo"
-).innerHTML =
-data.promo;
-
-document.getElementById(
-"lead"
-).innerHTML =
-data.lead;
-
-}
-
-loadData();
-
-setInterval(
-loadData,
-5000
-);
-
-</script>
 
 </body>
 </html>
